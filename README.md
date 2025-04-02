@@ -19,7 +19,9 @@ A Chrome extension for tracking cryptocurrency prices and news in real-time.
 This extension requires a CryptoPanic API key for news functionality:
 1. Sign up at [CryptoPanic](https://cryptopanic.com/)
 2. Get your API key
-3. Enter the API key in the extension settings
+3. Enter the API key in the placeholder in the popup.js file
+4. Enter the API key in the extension settings
+
 
 ## Development
 - Built with JavaScript

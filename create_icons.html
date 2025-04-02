@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<body>
+<canvas id="iconCanvas"></canvas>
+<script>
+function createIcon(size) {
+    const canvas = document.getElementById('iconCanvas');
+    canvas.width = size;
+    canvas.height = size;
+    const ctx = canvas.getContext('2d');
+    
+    // Draw a simple crypto-themed icon
+    ctx.fillStyle = '#f7931a'; // Bitcoin orange
+    ctx.fillRect(0, 0, size, size);
+    
+    ctx.fillStyle = 'white';
+    ctx.font = `${size/2}px Arial`;
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText('₿', size/2, size/2);
+    
+    // Convert to PNG and download
+    const link = document.createElement('a');
+    link.download = `icon${size}.png`;
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+}
+
+// Create icons of different sizes
+[16, 48, 128].forEach(size => createIcon(size));
+</script>
+</body>
+</html> 
